@@ -1,0 +1,1 @@
+Arquivos com algumas práticas (exercício) de JavaScript para consultas rápidas de funções e/ou lógica
