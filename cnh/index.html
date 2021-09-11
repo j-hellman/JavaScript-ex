@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Departamento de Trânsito</title>
+  <link rel="stylesheet" href="cnh.css">
+</head>
+
+<body>
+  <header>
+    <h1>Departamento de Trânsito</h1> 
+  </header>
+
+  <section>
+    <div class="wrap">
+      <p>Ano atual:</p>
+      <p class="msgAno">Mostrar ano atual aqui</p>
+    </div>
+
+    <div class="wrap">
+      <p>Ano de nascimento:</p>
+      <input type="number" name="nasc" id="nasc">
+    </div>
+
+    <div>
+      <h3>STATUS</h3>
+    </div>
+
+    <div class="wrap">
+      <p>Idade:</p>
+      <p class="msgId"></p>
+    </div>
+
+    <div>
+      <p class="msgRes"></p>
+    </div>
+
+    <button onclick="checar()">Checar</button> <!-- Botao realizar a checagem -->
+  </section>
+
+  <footer>
+    <p>&copy; Jaime Hellman</p>
+  </footer>
+
+  <script src="cnh.js"></script>
+</body>
+
+</html>
