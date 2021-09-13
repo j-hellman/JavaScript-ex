@@ -1,0 +1,37 @@
+<!-- Exercicio de velocidade no HTML -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="multa.css">
+  <title>Detran</title>
+</head>
+
+<body>
+  <header>
+    <h1>Sistema de multas</h1>
+  </header>
+
+  <section>
+    <p>Velocidade maxima permitida </p>
+    <input type="number" name="txtVelMax" id="txtVelMax">
+  
+    <p>Velocidade do carro</p>
+    <input type="number" name="txtVel" id="txtVel">
+  
+    <p class="res"></p>
+
+  
+    <button onclick="calcular()">Calcular</button>
+    <button onclick="limpar()">Limpar</button>
+  </section>
+
+  <script src="multa.js"></script>
+</body>
+
+</html>

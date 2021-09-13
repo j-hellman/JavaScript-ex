@@ -1,0 +1,15 @@
+
+header {
+  text-align: center;
+}
+
+section {
+  text-align: center;
+}
+
+span {
+  font-size: 1.1em;
+  color: white;
+  background: red;
+  padding: .2rem
+}
