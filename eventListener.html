@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+    <style>
+      body {
+        background: rgb(118, 163, 14);
+        color: white;
+        font: normal 18pt arial;
+      }
+
+      #area {
+        background: white;
+        color: black;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <h1>Olá mundo</h1>
+    <p>Testando JS</p>
+    <p>Nova linha testando JS</p>
+
+    <!-- 1a opcao: usando JS no HTML -->
+    <!-- <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Clique aqui...</div> -->
+    
+    <!-- 2a opcao: nao usando JS no HTML -->
+    <div id="area" >Clique aqui...</div>
+
+    <script>
+      let a = window.document.getElementById('area')
+
+      // 1a opcao: adicionando EventListener
+      a.addEventListener('click', clicar)
+      a.addEventListener('mouseenter', entrar)
+      a.addEventListener('mouseout', sair)
+      
+      function entrar(){
+        a.innerText = 'Entrou'
+      }
+
+      function clicar(){
+        a.innerText = 'Clicou!'
+        a.style.color = 'white'
+        a.style.background = 'red'
+        a.style.borderRadius = '10px'
+      }
+
+      function sair(){
+        a.innerText = 'Saiu'
+        a.style.background = 'white'
+        a.style.color = 'black'
+        a.style.borderRadius = '0'
+      }
+      
+
+    </script>
+
+  </body>
+</html>
