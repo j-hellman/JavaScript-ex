@@ -1,6 +1,6 @@
 body {
   font: normal 15px Arial;
-  background-color: rgb(255, 181, 83);
+  background-color: rgb(7, 116, 150);
 }
 
 header {
@@ -10,11 +10,10 @@ header {
 
 section {
   background: white;
-  border-radius: 10px;
   padding: 15px;
   max-width: 25rem;
   margin: auto;
-  text-align: center;
+  border-radius: 10px;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.452);
 }
 
@@ -22,8 +21,18 @@ footer {
   color: white;
   text-align: center;
   font-style: italic;
-
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+input {
+  margin-left: .6rem;
+}
+
 
 #imagem {
   height: 28vmin;
