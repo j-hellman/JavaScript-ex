@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="idade.css">
 </head>
 
-<body onload="carregar()"> <!-- carregara a funcao 'carregar' quando o body for carregado-->
+<body>
   <header>
     <h1>Verificador de idade</h1> 
   </header>
@@ -17,25 +17,25 @@
   <section>
     <div class="flex-row">
       <p>Ano de Nascimento:</p>
-      <input type="number" name="ano_nasc" id="ano">
+      <input type="number" name="anoNasc" id="anoNasc">
     </div>
     <div class="flex-row">
       <p>Sexo:</p>
-      <input type="radio" name="sex_masc" id="masc" value="MASC">
+      <input type="radio" name="sex-masc" id="masc">
       <label for="masc">Masculino</label>
-      <input type="radio" name="sex_fem" id="fem" value="FEM">
+      <input type="radio" name="sex-fem" id="fem">
       <label for="fem">Feminino</label>
-
     </div>
 
     <button onclick="verificar()">Verificar</button>
 
     <div>
-      <p>Preencha os dados acima para ver o resultado!</p>
+      <p id="msg">Preencha os dados acima para ver o resultado!</p>
     </div>
-    <!-- <div>
-      <img id="imagem" src="" alt="Foto do dia">
-    </div> -->
+
+    <div> <!-- Imagem so carrega apos click botao verificar -->
+      <img id="imagem" src="" alt="Foto da pessoa">
+    </div>
   </section>
 
   <footer>

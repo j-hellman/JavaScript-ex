@@ -1,34 +1,45 @@
-function carregar() { // funcao que sera chamada quando o body for carregado no html
-  let data = new Date()
-  let hora = data.getHours()
+  let data = new Date() //Data do sistema operacional
+  let anoAtual = data.getFullYear()
 
-  let sds = document.getElementById('sds') //Mensagem de bom dia/tarde/noite
-  let msg = document.getElementById('msg') //Mensagem das horas
-  let img = document.getElementById('imagem') //Imagem 
+  let anoNasc = document.getElementById('anoNasc') //Input do ano nascimento
+  let masc = document.getElementById('masc') //Input masculino
+  let fem = document.getElementById('fem') //Input feminino
+  let img = document.getElementById('imagem')
+
+  let sexo = '' //Var para receber o sexo
+
+  let msg = document.getElementById('msg') //Mensagem
+
+  // Botao verificar
+  function verificar() {
+    if (anoNasc.value !== '') { //Condicao para campo nascimento vazio
+      if (masc.checked || fem.checked) { //Condicao para campo sexo vazio
+        
+        let idade = anoAtual - Number(anoNasc.value) //Calculo da idade
+        
+        if (masc.checked) { //Checa se homem
+          sexo = 'Homem'
+          img.style.display = 'block' //Volta a mostrar a imagem
+          msg.style.textAlign = 'center' //Alinha ao centro a mensagem
+
+          if (idade < 18) {
+            img.src = "./assets/h-crianca.jpeg"
+
+          } else if (idade < 65) {
+            img.src = "./assets/h-adulto.jpeg"
+
+          } else img.src = "./assets/h-idoso.jpeg"
+        }
 
 
-  if (hora == 1) { //Condicao para checar hr em singular ou plural
-    msg.innerHTML = `Agora é <strong>${hora} hora<strong>.`
 
-  } else {
-    msg.innerHTML = `Agora são <strong>${hora} horas<strong>.`
+        // if (fem.checked) sexo = 'Mulher'
+    
+        msg.innerText = `Detectamos ${sexo} com ${idade} anos`
+
+
+
+      } else alert('Favor informar o sexo.')
+
+    } else alert('Favor informar o ano de nascimento.')
   }
-
-  if (hora >= 0 && hora < 12) { //condicao para a manha
-    sds.innerHTML = 'Bom Dia!'
-    img.src = './assets/dia.jpg'
-    window.document.body.style.background = 'rgb(255, 181, 83)'
-
-  } else if (hora >= 12 && hora < 18) { //condicao para a tarde
-    sds.innerHTML = 'Boa Tarde!'
-    img.src = './assets/tarde.jpg'
-    document.body.style.background = 'rgb(110, 65, 7)'
-
-  } else { //condicao para a noite
-    sds.innerHTML = 'Boa Noite!'
-    img.src = './assets/noite.jpg'
-    document.body.style.background = 'rgb(58, 58, 58)'
-  }
-}
-
-

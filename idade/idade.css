@@ -35,8 +35,10 @@ input {
 
 
 #imagem {
-  height: 28vmin;
-  width: 28vmin;
+  display: none;
+  margin: auto;
+  height: 25vmin;
+  width: 25vmin;
   border-radius: 50%;
 }
 
