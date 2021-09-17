@@ -1,57 +1,50 @@
   let data = new Date() //Data do sistema operacional
   let anoAtual = data.getFullYear()
 
-  //Inputs
-  let anoNasc = document.getElementById('anoNasc')
-  let masc = document.getElementById('masc') 
-  let fem = document.getElementById('fem') 
-  let img = document.querySelector('.imagem') 
-  //
-
-  let sexo = '' //Variavel para receber o sexo informado
+  let anoNasc = document.getElementById('anoNasc') //Ano nascimento
   let msg = document.querySelector('.msg') //Mensagem
 
   // Botao verificar
   function verificar() {
-    if (anoNasc.value !== '') { //Verifica campo nascimento vazio
-      if (masc.checked || fem.checked) { //Verifica campo sexo vazio
-        
-        let idade = anoAtual - Number(anoNasc.value) //Calculo da idade
-        
-        img.style.display = 'block' //Volta a mostrar a imagem
-        msg.style.textAlign = 'center' //Alinha msg ao centro
-        
-        //Se homem
-        if (masc.checked) {
-          sexo = 'Homem'
-
-          if (idade < 18) {
-            img.src = "./assets/h-crianca.jpeg"
-
-          } else if (idade < 65) {
-            img.src = "./assets/h-adulto.jpeg"
-
-          } else img.src = "./assets/h-idoso.jpeg"
-        }
-        //
-
-        //Se mulher
-        if (fem.checked) {
-          sexo = 'Mulher'
-        
-          if (idade < 18) {
-            img.src = "./assets/m-crianca.jpeg"
-
-          } else if (idade < 65) {
-            img.src = "./assets/m-adulta.jpeg"
-
-          } else img.src = "./assets/m-idosa.jpeg"
-        }
-        //
+    if (anoNasc.value.length == 0 || anoNasc.value > anoAtual) { //Verifica campo nascimento vazio
+      alert('[ERRO]: Verifique os dados e tente novamente.')
     
-        //Mensagem
-        msg.innerText = `Detectamos ${sexo} com ${idade} anos`
+    } else {
+      let idade = anoAtual - Number(anoNasc.value) //Calculo da idade
+      let fsex = document.getElementsByName('radsex') //Input radio
+      let genero = '' //Variavel para receber o sexo informado
 
-      } else alert('Favor informar o sexo.')
-    } else alert('Favor informar o ano de nascimento.')
+      //Imagem dinamica
+      let img = document.createElement('img')
+      img.setAttribute('id', 'foto')
+      //
+          
+      if (fsex[0].checked) { //Homem
+        genero = 'Homem'
+
+        if (idade < 18) {
+          img.setAttribute('src', './assets/h-crianca.jpeg')
+
+        } else if (idade < 65) {
+          img.setAttribute('src', './assets/h-adulto.jpeg')
+
+        } else img.setAttribute('src', './assets/h-idoso.jpeg')
+
+      } else if (fsex[1].checked) { //Mulher
+        genero = 'Mulher'
+      
+        if (idade < 18) {
+          img.setAttribute('src', './assets/m-crianca.jpeg')
+
+        } else if (idade < 65) {
+          img.setAttribute('src', './assets/m-adulta.jpeg')
+
+        } else img.setAttribute('src', './assets/m-idosa.jpeg')
+      }
+  
+      //Mensagem
+      msg.style.textAlign = 'center' //Alinha msg ao centro
+      msg.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+      msg.appendChild(img)
+    }
   }

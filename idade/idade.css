@@ -33,8 +33,12 @@ input {
   margin-left: .6rem;
 }
 
-.imagem {
-  display: none;
+.msg {
+  display: flex;
+  flex-direction: column;
+}
+
+#foto {
   margin: auto;
   height: 25vmin;
   width: 25vmin;

@@ -16,26 +16,22 @@
 
   <section>
     <div class="flex-row">
-      <p>Ano de Nascimento:</p>
-      <input type="number" name="anoNasc" id="anoNasc">
+      <p>Ano de Nascimento: </p>
+      <input type="number" name="anoNasc" id="anoNasc" min="0">
     </div>
 
     <div class="flex-row">
       <p>Sexo:</p>
-      <input type="radio" name="sex-masc" id="masc">
+      <input type="radio" name="radsex" id="masc" checked>
       <label for="masc">Masculino</label>
-      <input type="radio" name="sex-fem" id="fem">
+      <input type="radio" name="radsex" id="fem">
       <label for="fem">Feminino</label>
     </div>
 
     <button onclick="verificar()">Verificar</button> <!-- Botao verificar -->
 
-    <div>
-      <p class="msg">Preencha os dados acima para ver o resultado!</p>
-    </div>
-
-    <div> <!-- Imagem so carrega apos click botao verificar -->
-      <img class="imagem" src="" alt="Foto da pessoa">
+    <div class="msg">
+      <p>Preencha os dados acima para ver o resultado!</p>
     </div>
   </section>
 
