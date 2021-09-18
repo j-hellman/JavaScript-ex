@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hora do dia</title>
+  <link rel="stylesheet" href="contagem.css">
+</head>
+
+<body> <!-- carregara a funcao 'carregar' quando o body for carregado-->
+  <header>
+    <h1>Vamos contar</h1> 
+  </header>
+
+  <section>
+    <div>
+      <p>
+        <label for="txtinicio">Início: </label> 
+        <input type="number" name="txtinicio" id="txtinicio">
+      </p>
+      <p>
+        <label for="txtfim">Fim: </label>
+        <input type="number" name="txtfim" id="txtfim">
+      </p>
+      <p>
+        <label for="txtpasso">Passo: </label>
+        <input type="number" name="txtpasso" id="txtpasso">
+      </p>
+      <button onclick="contar()">Contar</button>
+    </div>
+
+    <div id="res">
+      <p>Preparando a contagem...</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Jaime Hellman</p>
+  </footer>
+
+  <script src="contagem.js"></script>
+</body>
+
+</html>
