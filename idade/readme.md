@@ -1,4 +1,4 @@
-# Exercício: Checagem da idade e gênero do usuário
+# Exercício: Idade e gênero do usuário
 
 Objetivo: mostrar a idade e gênero do usuário de acordo com os inputs fornecidos
 
