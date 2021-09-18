@@ -6,7 +6,7 @@
 
   // Botao verificar
   function verificar() {
-    if (anoNasc.value.length == 0 || anoNasc.value > anoAtual) { //Verifica campo nascimento vazio
+    if (anoNasc.value.length < 4 || anoNasc.value > anoAtual) { //Verifica campo nascimento vazio
       alert('[ERRO]: Verifique os dados e tente novamente.')
     
     } else {
