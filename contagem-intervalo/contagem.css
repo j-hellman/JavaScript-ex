@@ -23,15 +23,15 @@ footer {
   font-style: italic;
 }
 
-p {
+.dados {
   display: flex;
 }
 
-p label {
+.dados label {
   width: 8ch;
 }
 
-p input {
+.dados input {
   width: 15ch;
 }
 
