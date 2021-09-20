@@ -7,12 +7,10 @@ function carregar() { // funcao que sera chamada quando o body for carregado no 
   let img = document.getElementById('imagem') //Imagem 
 
 
-  if (hora == 1) { //Condicao para checar hr em singular ou plural
+  if (hora == 1)  //Condicao para checar hr em singular ou plural
     msg.innerHTML = `Agora é <strong>${hora} hora<strong>.`
-
-  } else {
+  else 
     msg.innerHTML = `Agora são <strong>${hora} horas<strong>.`
-  }
 
   if (hora >= 0 && hora < 12) { //condicao para a manha
     sds.innerHTML = 'Bom Dia!'
