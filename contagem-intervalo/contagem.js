@@ -6,10 +6,12 @@ function contar() {
   let res = document.getElementById('res')
   let total = []
 
+  //Emojis
   let emojis = [
     128073, //mao 
     127937 //bandeira
   ]
+  //
 
   for(let soma = Number(inicio.value); soma <= fim.value; soma += Number(passo.value)) {
     total.push(soma)
