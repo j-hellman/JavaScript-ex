@@ -20,6 +20,5 @@ console.log('--------------------')
 */
 let lim = 25
 
-for (let i = 1; i <= lim; i++) {
-console.log(i)
-}
+for (let i = 1; i <= lim; i++)
+  console.log(i)
