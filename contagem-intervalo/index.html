@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hora do dia</title>
+  <title>Vamos contar</title>
   <link rel="stylesheet" href="contagem.css">
 </head>
 
@@ -17,19 +17,21 @@
   <section>
     <div>
       <p class="dados">
-        <label for="txtinicio">Início: </label> 
-        <input type="number" name="txtinicio" id="txtinicio">
+        <label for="inicio">Início: </label> 
+        <input type="number" name="inicio" id="txtinicio">
       </p>
       <p class="dados">
-        <label for="txtfim">Fim: </label>
-        <input type="number" name="txtfim" id="txtfim">
+        <label for="fim">Fim: </label>
+        <input type="number" name="fim" id="txtfim">
       </p>
       <p class="dados">
-        <label for="txtpasso">Passo: </label>
-        <input type="number" name="txtpasso" id="txtpasso">
+        <label for="passo">Passo: </label>
+        <input type="number" name="passo" id="txtpasso">
       </p>
-      <button onclick="contar()">Contar</button>
-      <button onclick="zerar()">Zerar</button>
+      <p>
+        <button onclick="contar()">Contar</button>
+        <button onclick="zerar()">Zerar</button>
+      </p>
     </div>
 
     <div id="res">

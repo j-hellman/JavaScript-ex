@@ -1,35 +1,42 @@
-
 let inicio = document.getElementById('txtinicio')
 let fim = document.getElementById('txtfim')
 let passo = document.getElementById('txtpasso')
-let btn = document.querySelector('button')
 let res = document.getElementById('res')
-let total = []
-
-//Emojis
-let emojis = [
-  128073, //mao 
-  127937 //bandeira
-]
-//
 
 // Botao contar
 function contar() {
-  for(let soma = Number(inicio.value); soma <= fim.value; soma += Number(passo.value)) {
-    total.push(soma)
-    total.push(String.fromCodePoint(emojis[0])) //Emoji mao
-  }
-  
-  total.push(String.fromCodePoint(emojis[1])) //Emoji bandeira
-  res.innerHTML = '<p>Contando: </p>'
-  res.innerHTML += total.join('') //Mostra o resultado do array sem as vírgulas
-}
+  if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) { 
+    //Checagem campos INICIO e FIM
+    res.innerHTML = 'Impossível contar!'
 
+  } else {
+    res.innerHTML = 'Contando: <br/>'
+
+    if (Number(passo.value <= 0)) { 
+      //Checagem campo PASSO
+      alert('Passo inválido! Considerando PASSO: 1')
+      passo.value = 1
+    }
+    
+    if (Number(inicio.value) < Number(fim.value)) {
+      //Contagem crescente
+      for(let soma = Number(inicio.value); soma <= fim.value; soma += Number(passo.value)) {
+        res.innerHTML += ` ${soma} \u{1F449}` //Emoji
+      }
+
+    } else { //Condicao para INICIO > FIM
+      for(let soma = Number(inicio.value); soma >= fim.value; soma -= Number(passo.value)) {
+        res.innerHTML += ` ${soma} \u{1F449}` //Emoji
+      }
+    }
+    res.innerHTML += `\u{1F3C1}` //Emoji bandeira
+  }
+}
 
 // Botao zerar
 function zerar() {
   inicio.value = ''
   fim.value = ''
   passo.value = ''
-  res.innerHTML = '<p>Preparando a contagem...</p>'
+  res.innerHTML = 'Preparando a contagem...'
 }
