@@ -1,42 +1,31 @@
-let inicio = document.getElementById('txtinicio')
-let fim = document.getElementById('txtfim')
-let passo = document.getElementById('txtpasso')
-let res = document.getElementById('res')
 
-// Botao contar
-function contar() {
-  if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) { 
-    //Checagem campos INICIO e FIM
-    res.innerHTML = 'Impossível contar!'
+function tabuada() {
+  let num = document.getElementById('txtn')
+  let tab = document.getElementById('seltab')
 
-  } else {
-    res.innerHTML = 'Contando: <br/>'
+  if (num.value.length == 0)
+    //Verifica campo preenchido
+    alert('Impossível calcular. Favor digitar um número.')
 
-    if (Number(passo.value <= 0)) { 
-      //Checagem campo PASSO
-      alert('Passo inválido! Considerando PASSO: 1')
-      passo.value = 1
+  else {
+    tab.innerHTML = '' //Limpa a tabuada 
+    let n = Number(num.value)
+    let radop = document.getElementsByName('radop')
+
+    for (let i = 1; i <= 10; i++) {
+      let item = document.createElement('option') //Cria dinamicamente o elemento OPTION dentro da SELECT
+      
+      //Calculo da tabuada
+      if (radop[0].checked) 
+        item.text = `${n} + ${i} = ${n + i}`
+      else if (radop[1].checked)
+        item.text = `${n} - ${i} = ${n - i}`
+      else if (radop[2].checked) 
+        item.text = `${n} * ${i} = ${n * i}`
+      else item.text = `${n} / ${i} = ${n / i}`
+      
+      item.value = `tab${i}` //Adiciona VALUE a cada option
+      tab.appendChild(item) //Adiciona o resultado na SELECT
     }
-    
-    if (Number(inicio.value) < Number(fim.value)) {
-      //Contagem crescente
-      for(let soma = Number(inicio.value); soma <= fim.value; soma += Number(passo.value)) {
-        res.innerHTML += ` ${soma} \u{1F449}` //Emoji
-      }
-
-    } else { //Condicao para INICIO > FIM
-      for(let soma = Number(inicio.value); soma >= fim.value; soma -= Number(passo.value)) {
-        res.innerHTML += ` ${soma} \u{1F449}` //Emoji
-      }
-    }
-    res.innerHTML += `\u{1F3C1}` //Emoji bandeira
   }
-}
-
-// Botao zerar
-function zerar() {
-  inicio.value = ''
-  fim.value = ''
-  passo.value = ''
-  res.innerHTML = 'Preparando a contagem...'
 }

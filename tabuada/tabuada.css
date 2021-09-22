@@ -23,20 +23,6 @@ footer {
   font-style: italic;
 }
 
-/* Input p/ entrada de dados  */
-.dados {
-  display: flex;
-}
-
-.dados label {
-  width: 8ch;
-}
-
-.dados input {
-  width: 15ch;
-}
-/*  */
-
 
 
 
