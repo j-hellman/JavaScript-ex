@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabuada</title>
+  <link rel="stylesheet" href="tabuada.css">
+</head>
+
+<body> <!-- carregara a funcao 'carregar' quando o body for carregado-->
+  <header>
+    <h1>Tabuada</h1> 
+  </header>
+
+  <section>
+    <div>
+      <p>
+        <!-- Input -->
+        <label for="inicio">Número: </label> 
+        <input type="number" name="num" id="txtn">
+
+        <!-- Botao Gerar Tabuada -->
+        <button onclick="tabuada()">Gerar Tabuada</button>
+      </p>
+      <p>
+        <!-- Operadores -->
+        <input type="radio" name="radop" id="txtadi" checked>
+        <label for="txtadi">Adição</label>
+        <input type="radio" name="radop" id="txtsub">
+        <label for="txtsub">Subtração</label>
+        <input type="radio" name="radop" id="txtmul">
+        <label for="txtmul">Multiplicação</label>
+        <input type="radio" name="radop" id="txtdiv">
+        <label for="txtdiv">Divisão</label>
+      </p>
+    </div>
+
+    <div>
+      <!-- Uso do SELECT para resultado tabuada -->
+      <select name="tabuada" id="seltab" size="10">
+        <option value="res">Digite um número acima</option>
+      </select>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Jaime Hellman</p>
+  </footer>
+
+  <script src="tabuada.js"></script>
+</body>
+
+</html>
