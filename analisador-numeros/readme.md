@@ -1,9 +1,9 @@
-# Exercício: Tabuada
+# Exercício: Analisador de Números
 
-Objetivo: elaborar a tabuada de um determinado número fornecido pelo usuário
+Objetivo: elaborar um analisador de números na qual o usuário adiciona números aleatórios entre 01 e 100 e o programa emite diversas análises ao final.
 
 Funções: 
-- verificar se campos estão preenchidos
-- usuário escolhe adição, subtração, multiplicação ou divisão
-- receber o número fornecido pelo usuário e elaborar a tabuada desse número
-- uso do "select" para mostrar a tabuada
+- realizar diversas validações de dados e campos
+- usuário adiciona números aleatórios entre 01 e 100
+- uso do "select" para mostrar os números adicionados
+- ao finalizar é emitido diversas análises dos números ao usuário
