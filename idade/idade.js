@@ -1,6 +1,5 @@
   let data = new Date() //Data do sistema operacional
   let anoAtual = data.getFullYear()
-
   let anoNasc = document.getElementById('anoNasc') //Ano nascimento
   let msg = document.querySelector('.msg') //Mensagem
 
@@ -8,7 +7,6 @@
   function verificar() {
     if (anoNasc.value.length < 4 || anoNasc.value > anoAtual) //Verifica campo nascimento vazio
       alert('[ERRO]: Verifique os dados e tente novamente.')
-    
     else {
       let idade = anoAtual - Number(anoNasc.value) //Calculo da idade
       let fsex = document.getElementsByName('radsex') //Input radio

@@ -6,7 +6,6 @@ function tabuada() {
   if (num.value.length == 0)
     //Verifica campo preenchido
     alert('Impossível calcular. Favor digitar um número.')
-
   else {
     tab.innerHTML = '' //Limpa a tabuada 
     let n = Number(num.value)

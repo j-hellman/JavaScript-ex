@@ -18,7 +18,6 @@ const rl = readline.createInterface({
 // Entrada qtde alunos
 rl.question('Quantos alunos a turma tem? ', (numAluno) => {
   qtdAluno = Number(numAluno)
-
   rl.close();
 });
 
@@ -34,20 +33,14 @@ for (let i = 1; i <= qtdAluno; i++) { //Loop para solicitar nome e nota dos alun
     notaAluno = Number(nota)
   });
 
-  
   // Retorno dos dados na tela
   console.log(`ALUNO ${i}`);
   console.log(`Nome do aluno: ${nomeAluno}`);
   console.log(`Nota de ${nomeAluno}: ${notaAluno}`);
   console.log('----------------------');
-
-
 }
 
 console.log(`O melhor aproveitamento foi de ${''} com a nota ${''}`)
-
-
-
 
 // CODIGO SEM A ENTRADA DE DADOS
 /*

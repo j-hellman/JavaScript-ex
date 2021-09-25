@@ -10,10 +10,8 @@ function calcular() {
     if (vel > velMax) {
       res.innerHTML = `A velocidade maxima é de ${velMax}km/h. `
       res.innerHTML += `Sua velocidade é de ${vel}km/h. <span>Você foi multado!</span>`
-
     } else
       res.innerHTML = ' Dirija com segurança. Use o cinto.'
-
   } else
     res.innerHTML = 'Favor preencher os campos.'
 }
