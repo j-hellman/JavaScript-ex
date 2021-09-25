@@ -54,3 +54,20 @@ function finalizar() {
     //
   }
 }
+
+function limpar() {
+  valores = []
+  document.getElementById('fnum').focus()
+  document.getElementById('fnum').value = ''
+  res.innerHTML = ''
+  
+  //Funcao para remover options do select
+  function removeOptions(selectElement) {
+    var i, L = selectElement.options.length - 1;
+    for(i = L; i >= 0; i--) 
+       selectElement.remove(i);
+  }
+  
+  // using the function:
+  removeOptions(document.getElementById('flista'));
+}
