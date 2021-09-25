@@ -5,14 +5,13 @@ let lista = document.getElementById('flista') //Lista Select
 function adicionar() {
   let num = document.getElementById('fnum') //Input numero
   let n = Number(num.value)
-  
-  if (n < 1 || n > 100 || valores.indexOf(n) != -1) { //Validador do input número
+
+  if (n < 1 || n > 100 || valores.indexOf(n) != -1) //Validador do input número
     alert('Valor inválido ou já encontrado na lista.')
-    
-  } else {
+  else {
     res.innerHTML = ''
     valores.push(n)
-    
+
     //Lista Select
     let item = document.createElement('option') 
     item.text = `Valor ${n} adicionado.`
@@ -23,12 +22,10 @@ function adicionar() {
   num.focus() //Cursor do mouse
 }
 
-
 function finalizar() {
-  if (valores.length == 0) { //Validador campo Select
+  if (valores.length == 0) //Validador campo Select
     alert('Adicione valores antes de finalizar.')
-  
-  } else {
+  else {
     res.innerHTML = ''
 
     //Total numeros
@@ -47,10 +44,8 @@ function finalizar() {
     for (let pos in valores) {
       soma += valores[pos]
       media = soma / tot
-      if (valores[pos] > maior)
-        maior = valores[pos]
-      if (valores[pos] < menor)
-        menor = valores[pos]
+      if (valores[pos] > maior) maior = valores[pos]
+      if (valores[pos] < menor) menor = valores[pos]
     }
     res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
     res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
